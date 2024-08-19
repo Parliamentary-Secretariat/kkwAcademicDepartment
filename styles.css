@@ -3,8 +3,17 @@ body {
     font-family: "Pridi", serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: url(https://main.kkw-info.com/img/bg/bg3.png);
     color: #333;
+    width: 100%;
+    justify-content: center;
+    display: grid;
+}
+
+.body{
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
 /* ส่วนบน */
