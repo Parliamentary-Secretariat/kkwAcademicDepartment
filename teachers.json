@@ -1,10 +1,14 @@
 [
     {
         "username": "teacher01",
-        "password": "password123"
+        "password": "password123",
+        "firstName": "Somchai",
+        "lastName": "Sukjai"
     },
     {
         "username": "teacher02",
-        "password": "password456"
+        "password": "password456",
+        "firstName": "Somsri",
+        "lastName": "Saipai"
     }
 ]
