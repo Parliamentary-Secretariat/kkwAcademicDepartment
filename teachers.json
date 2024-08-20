@@ -3,12 +3,14 @@
         "username": "50230",
         "password": "Dara12369874",
         "firstName": "นายณภัทร",
-        "lastName": "ชินวัตร"
+        "lastName": "ชินวัตร",
+        "profilePic": "https://kkw-edx.pages.dev/logo.png"
     },
     {
         "username": "teacher02",
         "password": "password456",
         "firstName": "Somsri",
-        "lastName": "Saipai"
+        "lastName": "Saipai",
+        "profilePic": "https://kkw-edx.pages.dev/logo.png"
     }
 ]
