@@ -1,5 +1,87 @@
+
+/* รีเซ็ตการตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Pridi", serif;
-    background-color: #f7f7f7;
-    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* การจัดรูปแบบ header */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-info img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border: 2px solid #fff;
+}
+
+.profile-info span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header button {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+header button:hover {
+    background-color: #c82333;
+}
+
+/* การจัดรูปแบบ main content */
+main {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+main h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* เพิ่มการตอบสนองต่อขนาดหน้าจอ */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-info img {
+        width: 40px;
+        height: 40px;
+    }
+
+    header button {
+        margin-top: 10px;
+        width: 100%;
+    }
 }
