@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "login_teacher.html";  // หากไม่มีผู้ใช้ล็อกอินอยู่ ให้กลับไปหน้า login
     } else {
         document.getElementById("userProfile").textContent = `${user.firstName} ${user.lastName}`;
+        document.getElementById("profilePic").src = user.profilePic;
     }
 });
 
