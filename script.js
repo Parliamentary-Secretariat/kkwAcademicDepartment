@@ -10,8 +10,8 @@ async function login(event) {
         const teacher = teachers.find(t => t.username === username && t.password === password);
 
         if (teacher) {
-            alert("Login สำเร็จ!");
-            // คุณสามารถเพิ่มการนำทางไปยังหน้าอื่นได้ที่นี่
+            sessionStorage.setItem("loggedInUser", JSON.stringify(teacher));
+            window.location.href = "teacher.html";  // เปลี่ยนไปยังหน้า teacher.html
         } else {
             document.getElementById("error").textContent = "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง";
         }
