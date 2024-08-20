@@ -50,7 +50,8 @@ header button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
-    margin-left: 20px;
+    right: 25px;
+    position: absolute;
 }
 
 header button:hover {
