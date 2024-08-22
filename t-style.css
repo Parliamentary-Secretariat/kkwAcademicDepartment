@@ -105,27 +105,43 @@ main h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.menu-item h3 {
-    margin-top: 15px;
-    font-size: 18px;
-    color: #333;
+.menu-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon-container {
     background-color: #007bff;
     color: #fff;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: -25px;
-    right: -25px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
 }
 
 .icon-container i {
-    font-size: 20px;
+    font-size: 18px;
+}
+
+.menu-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* การตอบสนองต่อขนาดหน้าจอ */
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
 }
