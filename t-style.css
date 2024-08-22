@@ -139,4 +139,8 @@ main h1 {
     .menu-container {
         grid-template-columns: 1fr;
     }
+    .menu-item{
+          justify-content: left;
+          display: grid;
+    }
 }
