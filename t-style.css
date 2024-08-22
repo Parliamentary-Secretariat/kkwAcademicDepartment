@@ -81,11 +81,6 @@ main h1 {
         width: 40px;
         height: 40px;
     }
-
-    header button {
-        margin-top: 10px;
-        width: 100%;
-    }
 }
 /* การจัดรูปแบบเมนู */
 .menu-container {
