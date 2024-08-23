@@ -1,0 +1,14 @@
+
+/* รีเซ็ตการตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Pridi", serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
