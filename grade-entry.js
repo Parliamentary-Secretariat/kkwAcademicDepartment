@@ -1,12 +1,20 @@
 // สมมุติว่าเรามีข้อมูลนักเรียนและผู้ใช้/ครู
 let students = [
-    { id: '00001', name: 'นายนักเรียน A', grade: 'M401' },
-    { id: '00002', name: 'นางสาวนักเรียน B', grade: 'M401' },
+    { id: '00001', name: 'นายนักเรียน A', grade: '' },
+    { id: '00002', name: 'นางสาวนักเรียน B', grade: '' },
     { id: '00003', name: 'นายนักเรียน C', grade: '' }
 ];
 
+
+// ฟังก์ชันเพื่อโหลดข้อมูลนักเรียนจาก localStorage หากมี
 function loadStudents() {
+    const savedGrades = JSON.parse(localStorage.getItem('grades'));
+    if (savedGrades) {
+        students = savedGrades; // อัปเดต students ด้วยข้อมูลจาก localStorage
+    }
+
     const studentTable = document.getElementById('studentTable');
+    studentTable.innerHTML = ''; // ล้างข้อมูลเก่าก่อนโหลดใหม่
     students.forEach(student => {
         let row = document.createElement('tr');
         row.innerHTML = `
@@ -22,28 +30,28 @@ function loadStudents() {
     });
 }
 
+// ฟังก์ชันเพื่อเปิดให้แก้ไขคะแนน
 function enableEdit(studentId) {
-    // เปิดให้แก้ไขช่องกรอกคะแนน
     let gradeInput = document.getElementById(`grade-${studentId}`);
     gradeInput.disabled = false;
 
-    // เปิดใช้งานปุ่มบันทึก
     let saveButton = document.getElementById(`save-${studentId}`);
     saveButton.disabled = false;
 }
 
+// ฟังก์ชันเพื่อบันทึกคะแนนและรีเฟรชข้อมูล
 function saveGrade(studentId) {
-    // ปิดการแก้ไขช่องกรอกคะแนน
     let gradeInput = document.getElementById(`grade-${studentId}`);
     gradeInput.disabled = true;
 
-    // บันทึกคะแนน
     const grade = gradeInput.value;
     updateGrade(studentId, grade);
 
-    // ปิดใช้งานปุ่มบันทึกหลังจากบันทึกข้อมูล
     let saveButton = document.getElementById(`save-${studentId}`);
     saveButton.disabled = true;
+
+    // หลังจากบันทึกข้อมูลแล้ว รีโหลดข้อมูลทั้งหมดเพื่ออัปเดตตาราง
+    loadStudents();
 }
 
 // ฟังก์ชันเพื่ออัปเดตคะแนนในอาร์เรย์ students และบันทึกใน localStorage
@@ -55,7 +63,7 @@ function updateGrade(studentId, grade) {
     }
 }
 
-// ฟังก์ชันเพื่อบันทึกคะแนนลง localStorage
+// ฟังก์ชันเพื่อบันทึกข้อมูลลงใน localStorage
 function saveGrades() {
     localStorage.setItem('grades', JSON.stringify(students));
 }
