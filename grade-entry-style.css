@@ -41,6 +41,9 @@ header button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
+    right: 25px;
+    position: absolute;
+    margin: 0;
 }
 
 header button:hover {
