@@ -11,4 +11,79 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.org-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.org-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #800000;
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.org-title {
+    font-weight: bold;
+    color: #800000;
+    padding: 5px;
+    text-align: center;
+}
+
+.org-name {
+    color: #000;
+    padding: 5px;
+    text-align: center;
+}
+
+.org-branches {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+
+.org-branches::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background-color: #800000;
+}
+
+.org-node:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 20px;
+    height: 2px;
+    background-color: #800000;
+}
+
+.org-branches .org-node::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 10px;
+    background-color: #800000;
 }
