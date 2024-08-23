@@ -5,14 +5,6 @@ let students = [
     { id: '00003', name: 'นายนักเรียน C', grade: '' }
 ];
 
-// สมมุติว่าดึงข้อมูลผู้ใช้จากการล็อกอินแล้ว
-let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-
-// แสดงข้อมูลผู้ใช้ในส่วน Header
-document.getElementById('userProfile').innerText = currentUser.name;
-document.getElementById('profilePic').src = currentUser.profilePic;
-
-// ฟังก์ชันเพื่อโหลดรายชื่อนักเรียนและช่องกรอกคะแนน
 function loadStudents() {
     const studentTable = document.getElementById('studentTable');
     students.forEach(student => {
@@ -21,26 +13,40 @@ function loadStudents() {
             <td>${student.id}</td>
             <td>${student.name}</td>
             <td><input type="text" id="grade-${student.id}" value="${student.grade}" disabled></td>
-            <td><button onclick="editGrade('${student.id}')">แก้ไข</button></td>
+            <td>
+                <button onclick="enableEdit('${student.id}')">แก้ไข</button>
+                <button id="save-${student.id}" onclick="saveGrade('${student.id}')" disabled>บันทึก</button>
+            </td>
         `;
         studentTable.appendChild(row);
     });
 }
 
-function editGrade(studentId) {
+function enableEdit(studentId) {
+    // เปิดให้แก้ไขช่องกรอกคะแนน
     let gradeInput = document.getElementById(`grade-${studentId}`);
-    if (gradeInput.disabled) {
-        gradeInput.disabled = false;
-        document.querySelector(`button[onclick="editGrade('${studentId}')"]`).innerText = "บันทึก";
-    } else {
-        gradeInput.disabled = true;
-        updateGrade(studentId, gradeInput.value);
-        document.querySelector(`button[onclick="editGrade('${studentId}')"]`).innerText = "แก้ไข";
-    }
+    gradeInput.disabled = false;
+
+    // เปิดใช้งานปุ่มบันทึก
+    let saveButton = document.getElementById(`save-${studentId}`);
+    saveButton.disabled = false;
 }
 
+function saveGrade(studentId) {
+    // ปิดการแก้ไขช่องกรอกคะแนน
+    let gradeInput = document.getElementById(`grade-${studentId}`);
+    gradeInput.disabled = true;
 
-// ฟังก์ชันเพื่ออัปเดตคะแนนในอาร์เรย์ students
+    // บันทึกคะแนน
+    const grade = gradeInput.value;
+    updateGrade(studentId, grade);
+
+    // ปิดใช้งานปุ่มบันทึกหลังจากบันทึกข้อมูล
+    let saveButton = document.getElementById(`save-${studentId}`);
+    saveButton.disabled = true;
+}
+
+// ฟังก์ชันเพื่ออัปเดตคะแนนในอาร์เรย์ students และบันทึกใน localStorage
 function updateGrade(studentId, grade) {
     const student = students.find(s => s.id === studentId);
     if (student) {
@@ -49,27 +55,10 @@ function updateGrade(studentId, grade) {
     }
 }
 
-// ฟังก์ชันเพื่อบันทึกคะแนนลง localStorage (จำลองการบันทึกข้อมูลแบบ Real-Time)
+// ฟังก์ชันเพื่อบันทึกคะแนนลง localStorage
 function saveGrades() {
     localStorage.setItem('grades', JSON.stringify(students));
 }
 
 // โหลดข้อมูลนักเรียนเมื่อเปิดหน้า
 loadStudents();
-
-// เก็บข้อมูลผู้ใช้ลงใน localStorage
-let loggedInUser = {
-    name: 'ครูณภัทร ชินวัตร',
-    profilePic: 'link_to_profile_picture.jpg'
-};
-
-localStorage.setItem('currentUser', JSON.stringify(loggedInUser));
-
-// ดึงข้อมูลผู้ใช้จาก localStorage
-let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-
-// ใช้ข้อมูลผู้ใช้ที่ดึงมาจาก localStorage
-if (currentUser) {
-    document.getElementById('userProfile').innerText = currentUser.name;
-    document.getElementById('profilePic').src = currentUser.profilePic;
-}
