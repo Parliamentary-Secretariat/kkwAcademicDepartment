@@ -42,3 +42,19 @@ function saveGrades() {
 
 // โหลดข้อมูลนักเรียนเมื่อเปิดหน้า
 loadStudents();
+// เก็บข้อมูลผู้ใช้ลงใน localStorage
+let loggedInUser = {
+    name: 'ครูสมชาย',
+    profilePic: 'link_to_profile_picture.jpg'
+};
+
+localStorage.setItem('currentUser', JSON.stringify(loggedInUser));
+
+// ดึงข้อมูลผู้ใช้จาก localStorage
+let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+// ใช้ข้อมูลผู้ใช้ที่ดึงมาจาก localStorage
+if (currentUser) {
+    document.getElementById('userProfile').innerText = currentUser.name;
+    document.getElementById('profilePic').src = currentUser.profilePic;
+}
