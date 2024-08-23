@@ -67,7 +67,7 @@ body {
     background-color: #800000;
 }
 
-.org-node:not(:last-child)::after {
+/* .org-node:not(:last-child)::after {
     content: '';
     position: absolute;
     top: 0;
@@ -75,7 +75,7 @@ body {
     width: 20px;
     height: 2px;
     background-color: #800000;
-}
+} */
 
 .org-branches .org-node::before {
     content: '';
