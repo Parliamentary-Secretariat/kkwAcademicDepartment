@@ -1,29 +1,46 @@
-// สมมุติว่าเรามีข้อมูลนักเรียนและผู้ใช้/ครู
-let students = [
-    { id: '00001', name: 'นายนักเรียน A', grade: '' },
-    { id: '00002', name: 'นางสาวนักเรียน B', grade: '' },
-    { id: '00003', name: 'นายนักเรียน C', grade: '' }
-];
 
+// ตัวอย่างข้อมูลวิชาและนักเรียน
+let subjects = {
+    "คณิตศาสตร์": [
+        { id: '00001', name: 'นายศุภกฤต บุญคำ', grade: '' },
+        { id: '00002', name: 'นายคนอร์ ศรีวรรณา', grade: '' }
+    ],
+    "ภาษาไทย": [
+        { id: '00001', name: 'นายศุภกฤต บุญคำ', grade: '' },
+        { id: '00002', name: 'นายคนอร์ ศรีวรรณา', grade: '' }
+    ]
+};
 
-// ฟังก์ชันเพื่อโหลดข้อมูลนักเรียนจาก localStorage หากมี
-function loadStudents() {
-    const savedGrades = JSON.parse(localStorage.getItem('grades'));
-    if (savedGrades) {
-        students = savedGrades; // อัปเดต students ด้วยข้อมูลจาก localStorage
+// ฟังก์ชันเพื่อโหลดข้อมูลวิชา
+function loadSubjects() {
+    const savedSubjects = JSON.parse(localStorage.getItem('subjects'));
+    if (savedSubjects) {
+        subjects = savedSubjects; // อัปเดต subjects ด้วยข้อมูลจาก localStorage
     }
 
+    const subjectSelect = document.getElementById('subjectSelect');
+    for (let subject in subjects) {
+        let option = document.createElement('option');
+        option.value = subject;
+        option.innerText = subject;
+        subjectSelect.appendChild(option);
+    }
+}
+
+// ฟังก์ชันเพื่อโหลดข้อมูลนักเรียนสำหรับวิชาที่เลือก
+function loadStudentsForSubject(subject) {
     const studentTable = document.getElementById('studentTable');
     studentTable.innerHTML = ''; // ล้างข้อมูลเก่าก่อนโหลดใหม่
-    students.forEach(student => {
+
+    subjects[subject].forEach(student => {
         let row = document.createElement('tr');
         row.innerHTML = `
             <td>${student.id}</td>
             <td>${student.name}</td>
             <td><input type="text" id="grade-${student.id}" value="${student.grade}" disabled></td>
             <td>
-                <button onclick="enableEdit('${student.id}')">แก้ไข</button>
-                <button id="save-${student.id}" onclick="saveGrade('${student.id}')" disabled>บันทึก</button>
+                <button onclick="enableEdit('${subject}', '${student.id}')">แก้ไข</button>
+                <button id="save-${student.id}" onclick="saveGrade('${subject}', '${student.id}')" disabled>บันทึก</button>
             </td>
         `;
         studentTable.appendChild(row);
@@ -31,7 +48,7 @@ function loadStudents() {
 }
 
 // ฟังก์ชันเพื่อเปิดให้แก้ไขคะแนน
-function enableEdit(studentId) {
+function enableEdit(subject, studentId) {
     let gradeInput = document.getElementById(`grade-${studentId}`);
     gradeInput.disabled = false;
 
@@ -40,33 +57,39 @@ function enableEdit(studentId) {
 }
 
 // ฟังก์ชันเพื่อบันทึกคะแนนและรีเฟรชข้อมูล
-function saveGrade(studentId) {
+function saveGrade(subject, studentId) {
     let gradeInput = document.getElementById(`grade-${studentId}`);
     gradeInput.disabled = true;
 
     const grade = gradeInput.value;
-    updateGrade(studentId, grade);
+    updateGrade(subject, studentId, grade);
 
     let saveButton = document.getElementById(`save-${studentId}`);
     saveButton.disabled = true;
 
     // หลังจากบันทึกข้อมูลแล้ว รีโหลดข้อมูลทั้งหมดเพื่ออัปเดตตาราง
-    loadStudents();
+    loadStudentsForSubject(subject);
 }
 
-// ฟังก์ชันเพื่ออัปเดตคะแนนในอาร์เรย์ students และบันทึกใน localStorage
-function updateGrade(studentId, grade) {
-    const student = students.find(s => s.id === studentId);
+// ฟังก์ชันเพื่ออัปเดตคะแนนในอาร์เรย์ subjects และบันทึกใน localStorage
+function updateGrade(subject, studentId, grade) {
+    const student = subjects[subject].find(s => s.id === studentId);
     if (student) {
         student.grade = grade;
-        saveGrades();
+        saveSubjects();
     }
 }
 
 // ฟังก์ชันเพื่อบันทึกข้อมูลลงใน localStorage
-function saveGrades() {
-    localStorage.setItem('grades', JSON.stringify(students));
+function saveSubjects() {
+    localStorage.setItem('subjects', JSON.stringify(subjects));
 }
 
-// โหลดข้อมูลนักเรียนเมื่อเปิดหน้า
-loadStudents();
+// เมื่อเลือกวิชา ให้โหลดข้อมูลนักเรียนในวิชานั้น
+document.getElementById('subjectSelect').addEventListener('change', function() {
+    const selectedSubject = this.value;
+    loadStudentsForSubject(selectedSubject);
+});
+
+// โหลดข้อมูลวิชาเมื่อเปิดหน้า
+loadSubjects();
