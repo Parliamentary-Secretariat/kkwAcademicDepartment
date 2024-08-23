@@ -1,8 +1,8 @@
 // สมมุติว่าเรามีข้อมูลนักเรียนและผู้ใช้/ครู
 let students = [
-    { id: '61001', name: 'นายนักเรียน A', grade: '' },
-    { id: '61002', name: 'นางสาวนักเรียน B', grade: '' },
-    { id: '61003', name: 'นายนักเรียน C', grade: '' }
+    { id: '00001', name: 'นายนักเรียน A', grade: 'M401' },
+    { id: '00002', name: 'นางสาวนักเรียน B', grade: 'M401' },
+    { id: '00003', name: 'นายนักเรียน C', grade: '' }
 ];
 
 // สมมุติว่าดึงข้อมูลผู้ใช้จากการล็อกอินแล้ว
@@ -20,11 +20,25 @@ function loadStudents() {
         row.innerHTML = `
             <td>${student.id}</td>
             <td>${student.name}</td>
-            <td><input type="text" value="${student.grade}" oninput="updateGrade('${student.id}', this.value)"></td>
+            <td><input type="text" id="grade-${student.id}" value="${student.grade}" disabled></td>
+            <td><button onclick="editGrade('${student.id}')">แก้ไข</button></td>
         `;
         studentTable.appendChild(row);
     });
 }
+
+function editGrade(studentId) {
+    let gradeInput = document.getElementById(`grade-${studentId}`);
+    if (gradeInput.disabled) {
+        gradeInput.disabled = false;
+        document.querySelector(`button[onclick="editGrade('${studentId}')"]`).innerText = "บันทึก";
+    } else {
+        gradeInput.disabled = true;
+        updateGrade(studentId, gradeInput.value);
+        document.querySelector(`button[onclick="editGrade('${studentId}')"]`).innerText = "แก้ไข";
+    }
+}
+
 
 // ฟังก์ชันเพื่ออัปเดตคะแนนในอาร์เรย์ students
 function updateGrade(studentId, grade) {
@@ -42,9 +56,10 @@ function saveGrades() {
 
 // โหลดข้อมูลนักเรียนเมื่อเปิดหน้า
 loadStudents();
+
 // เก็บข้อมูลผู้ใช้ลงใน localStorage
 let loggedInUser = {
-    name: 'ครูสมชาย',
+    name: 'ครูณภัทร ชินวัตร',
     profilePic: 'link_to_profile_picture.jpg'
 };
 
