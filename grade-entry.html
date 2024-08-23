@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Entry</title>
+    <link rel="stylesheet" href="grade-entry-style.css">
+</head>
+<body>
+    <header>
+        <div class="profile-info">
+            <img id="profilePic" alt="Profile Picture">
+            <span id="userProfile"></span>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
+    <main>
+        <h1>กรอกผลการเรียน</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>รหัสนักเรียน</th>
+                    <th>ชื่อนักเรียน</th>
+                    <th>คะแนน</th>
+                </tr>
+            </thead>
+            <tbody id="studentTable">
+                <!-- รายชื่อนักเรียนและช่องกรอกคะแนนจะถูกใส่เข้ามาโดย JavaScript -->
+            </tbody>
+        </table>
+        <button id="saveGrades">บันทึกคะแนน</button>
+    </main>
+    <script src="grade-entry.js"></script>
+</body>
+</html>
