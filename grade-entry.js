@@ -129,3 +129,44 @@ document.getElementById('subjectSelect').addEventListener('change', function() {
 
 // โหลดข้อมูลวิชาเมื่อเปิดหน้า
 loadSubjects();
+
+// ---------------------------------------------------------------------------------------------
+
+// ฟังก์ชันเพื่อบันทึกประวัติการแก้ไข
+function saveEditHistory(subject, studentId, oldGrade, newGrade) {
+    const user = JSON.parse(localStorage.getItem('currentUser')); // ดึงข้อมูลผู้ใช้ที่ล็อกอิน
+    const timestamp = new Date().toLocaleString(); // เวลาปัจจุบัน
+
+    const historyItem = {
+        subject: subject,
+        studentId: studentId,
+        studentName: subjects[subject].find(s => s.id === studentId).name,
+        oldGrade: oldGrade,
+        newGrade: newGrade,
+        editedBy: user.username, // ใช้ชื่อผู้ใช้จากการล็อกอิน
+        timestamp: timestamp
+    };
+
+    let editHistory = JSON.parse(localStorage.getItem('editHistory')) || [];
+    editHistory.push(historyItem);
+    localStorage.setItem('editHistory', JSON.stringify(editHistory));
+}
+
+// ปรับปรุงฟังก์ชันเพื่อบันทึกคะแนนและบันทึกประวัติการแก้ไข
+function saveGrade(subject, studentId) {
+    let gradeInput = document.getElementById(`grade-${studentId}`);
+    let oldGrade = subjects[subject].find(s => s.id === studentId).grade;
+    let newGrade = gradeInput.value;
+
+    gradeInput.disabled = true;
+
+    if (oldGrade !== newGrade) {
+        updateGrade(subject, studentId, newGrade);
+        saveEditHistory(subject, studentId, oldGrade, newGrade); // บันทึกประวัติการแก้ไข
+    }
+
+    let saveButton = document.getElementById(`save-${studentId}`);
+    saveButton.disabled = true;
+
+    loadStudentsForSubject(subject);
+}
