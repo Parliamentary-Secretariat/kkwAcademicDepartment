@@ -7,7 +7,7 @@ if (teacherData) {
     document.getElementById('teacher-photo').src = teacherData.profilePic || 'default-photo.jpg';
 
     // ตรวจสอบว่าเป็นนายณภัทร ชินวัตร (หัวหน้าฝ่ายวิชาการเพียงคนเดียว)
-    if (teacherData.username === 'นายณภัทร ชินวัตร') {
+    if (teacherData.username === '50230') {
         document.getElementById('academic-head-button').style.display = 'block';
     }
 }
