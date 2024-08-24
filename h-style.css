@@ -5,6 +5,22 @@ body {
     padding: 20px;
     background-color: #f4f4f4;
     color: #333;
+    position: relative; /* Add position relative for the watermark */
+}
+
+
+/* Watermark */
+body::before {
+    content: "";
+    background: url('https://kkw-edx.pages.dev/logo.png') no-repeat center center;
+    background-size: 40%; /* Adjust the size of the watermark */
+    opacity: 0.1; /* Set the transparency */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the watermark is behind the content */
 }
 
 h1 {
