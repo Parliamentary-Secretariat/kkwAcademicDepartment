@@ -104,3 +104,11 @@ button:hover {
   color: #fff;
   font-family: "Pridi", serif;
 }
+
+
+/* เปลี่ยนฟอนต์สำหรับตัวเลือกทั้งหมดใน select */
+#subjectSelect option {
+  font-family: "Pridi", serif;
+  color: #fff; /* เปลี่ยนสีตัวอักษรในตัวเลือก */
+  background-color: #007bff; /* เปลี่ยนสีพื้นหลังในตัวเลือก */
+}
