@@ -94,3 +94,13 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+#subjectSelect {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #007bff;
+  color: #fff;
+  font-family: "Pridi", serif;
+}
