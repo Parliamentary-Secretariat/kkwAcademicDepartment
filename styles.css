@@ -3,7 +3,8 @@ body {
     font-family: "Pridi", serif;
     margin: 0;
     padding: 0;
-    background: #f9c8c8;
+    background: url(background.png) center bottom;
+/*     background: #f9c8c8; */
     color: #333;
     width: 100%;
     justify-content: center;
