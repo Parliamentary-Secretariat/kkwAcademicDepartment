@@ -1,6 +1,6 @@
 body {
     font-family: "Pridi", serif;
-    background-color: #f7f7f7;
+    background: url(background.png) center bottom;
     display: flex;
     justify-content: center;
     align-items: center;
