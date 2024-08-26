@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Pridi", serif;
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
@@ -22,7 +22,7 @@ h2 {
 }
 
 input[type="text"], input[type="password"] {
-    width: 100%;
+    width: -moz-available;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -32,7 +32,7 @@ input[type="text"], input[type="password"] {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #ff8f00;
     color: white;
     border: none;
     border-radius: 4px;
@@ -40,7 +40,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #ffb300;
 }
 
 .error-message {
