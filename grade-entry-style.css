@@ -38,7 +38,7 @@ header {
 }
 
 header button {
-    background-color: #dc3545;
+    background-color: #f00;
     color: #fff;
     padding: 8px 15px;
     border: none;
@@ -51,7 +51,7 @@ header button {
 }
 
 header button:hover {
-    background-color: #c82333;
+    background-color: #ff8f00;
 }
 
 main {
