@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: #007bff;
+    background-color: #A73B24;
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -72,7 +72,7 @@ table th, table td {
 }
 
 table th {
-    background-color: #007bff;
+    background-color: #A73B24;
     color: #fff;
 }
 
@@ -84,7 +84,7 @@ table td input {
 }
 
 button {
-    background-color: #007bff;
+    background-color: #A73B24;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -96,7 +96,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #862612;
 }
 
 #subjectSelect {
@@ -104,7 +104,7 @@ button:hover {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  background: #007bff;
+  background: #A73B24;
   color: #fff;
   font-family: "Pridi", serif;
 }
@@ -114,5 +114,5 @@ button:hover {
 #subjectSelect option {
   font-family: "Pridi", serif;
   color: #fff; /* เปลี่ยนสีตัวอักษรในตัวเลือก */
-  background-color: #007bff; /* เปลี่ยนสีพื้นหลังในตัวเลือก */
+  background-color: #A73B24; /* เปลี่ยนสีพื้นหลังในตัวเลือก */
 }
