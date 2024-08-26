@@ -23,6 +23,7 @@ h2 {
 
 input[type="text"], input[type="password"] {
     width: -moz-available;
+    width: -webkit-fill-available;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
