@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&amp;family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Mitr:wght@200;300;400;500;600;700&amp;family=Noto+Sans+Thai:wght@100..900&amp;family=Pattaya&amp;family=Pridi:wght@200;300;400;500;600;700&amp;family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
+    <title>Subject Grades</title>
+    <link rel="stylesheet" href="s-style.css">
+</head>
+<body>
+    <div class="login-container" id="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="student-id" placeholder="รหัสนักเรียน" required>
+            <input type="password" id="id-number" placeholder="เลขบัตรประชาชน" required>
+            <button type="submit">Login</button>
+        </form>
+        <p id="login-error" class="error-message"></p>
+    </div>
+
+    <div class="grades-container" id="grades-container" style="display:none;">
+        <h2>ผลการเรียนรายวิชา</h2>
+        <div id="student-info">
+            <p><strong>ชื่อ:</strong> <span id="student-name"></span></p>
+            <p><strong>ชั้น:</strong> <span id="student-class"></span></p>
+            <p><strong>เลขที่:</strong> <span id="student-number"></span></p>
+            <p><strong>รหัสนักเรียน:</strong> <span id="student-id-display"></span></p>
+        </div>
+        <table id="grades-table">
+            <thead>
+                <tr>
+                    <th>วิชา</th>
+                    <th>คะแนน</th>
+                    <th>เกรด</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ผลการเรียนของนักเรียนจะแสดงที่นี่ -->
+            </tbody>
+        </table>
+        <button id="logout-button">Logout</button>
+    </div>
+
+    <script src="s-script.js"></script>
+</body>
+</html>
