@@ -15,7 +15,7 @@ body {
 
 /* การจัดรูปแบบ header */
 header {
-    background-color: #007bff;
+    background-color: #A73B24;
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -43,7 +43,7 @@ header {
 }
 
 header button {
-    background-color: #dc3545;
+    background-color: #ff8f00;
     color: #fff;
     padding: 8px 15px;
     border: none;
@@ -55,7 +55,7 @@ header button {
 }
 
 header button:hover {
-    background-color: #c82333;
+    background-color: #ffb300;
 }
 
 /* การจัดรูปแบบ main content */
@@ -110,7 +110,7 @@ main h1 {
 }
 
 .icon-container {
-    background-color: #007bff;
+    background-color: #A73B24;
     color: #fff;
     border-radius: 50%;
     width: 40px;
