@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.css">
+</head>
+<body>
+    <div class="wrap_menu">
+        <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block">
+            <section id="mainmenu">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-2 mt-2 text-center">
+                            <div class="mainlogo">
+                                <a href="/">
+                                    <img src="https://kkw-edx.pages.dev/mainlogo.png" alt="">
+                                </a>
+                            </div>
+                            <div class="mainlogoB">
+                                <a href="/">
+                                    <img src="https://kkw-edx.pages.dev/mainlogoci.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-10 text-end">
+                            <div class="topmenu">
+                                <ul>
+                                    <li class="TH">
+                                        <div class="choose-size">
+                                            ขนาด
+                                            <button class="fontsize_s">ก</button>
+                                            <button class="fontsize_m">ก</button>
+                                            <button class="fontsize_l">ก</button>
+                                        </div>
+                                    </li>
+                                    <li class="EN" hidden="hidden">
+                                        <div class="choose-size">
+                                            Text Size
+                                            <button class="fontsize_s">A</button>
+                                            <button class="fontsize_m">A</button>
+                                            <button class="fontsize_l">A</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="searchtop">
+                                            <div class="input-group">
+                                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                                                    <i class="bi bi-search"></i>
+                                                </button>
+                                                <input type="text" id="search-box" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="dropdown">
+
+                                            <button class="changeLang dropdown-toggle TH" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                TH
+                                            </button>
+                                            <button class="changeLang dropdown-toggle EN" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" hidden="hidden">
+                                                EN
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                <li><a class="dropdown-item SW_TH active" onclick="switchlg(1)">Thai</a></li>
+                                                <li><a class="dropdown-item SW_EN" onclick="switchlg(2)">English</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-2" id="nav">
+                                <ul class="mainmenu">
+
+                                    <li class="TH">
+                                            <a href="#"> เกี่ยวกับโรงเรียน  <i class="fi fi-rr-angle-small-down"></i> </a>
+                                        <div class="dropdown-container">
+                                            <ul class="submenudrop">
+                                                <div class="row">
+                                                        <div class="col-md-2 border-end">
+                                                            <div class="headMenu">
+                                                                <span> About KNIS </span> <br>
+                                                                เกี่ยวกับโรงเรียน
+                                                            </div>
+                                                        </div>
+
+                                                    <div class="col-md-3">
+                                                        <div class="submenuList">
+                                                                <ul>
+                                                                    <li><a href="/about_discover"> ข้อมูลโรงเรียน  </a></li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li><a href="/about_foundation">ข้อมูลมูลนิธิ  </a></li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li><a href="/about_royalschool">ชื่อพระราชทาน </a></li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li><a href="/about_administrators">ผู้บริหาร  </a></li>
+                                                                </ul>
+                                                                <ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul>
+                                                                <ul>
+                                                                    <li><a href="/about_board_of_governors"> คณะกรรมการ </a></li>
+                                                                </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="submenuList">
+                                                                <ul></ul><ul></ul><ul></ul><ul></ul>
+                                                                <ul>
+                                                                    <li>
+                                                                        <a href="/message_chairman">สาสน์จากประธานกรรมการบริหารโรงเรียน  </a>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li>
+                                                                        <a href="/message_principle">สาสน์จากผู้อำนวยการโรงเรียน  </a>
+                                                                    </li>
+                                                                                                                                                                                                                                                                        </ul>
+                                                                <ul>
+                                                                    <li>
+                                                                        <a href="/about_teacher">คณาจารย์และผู้ทรงคุณวุฒิ   </a>
+                                                                    </li>
+                                                                                                                                                                                                        </ul>
+                                                                <ul>
+                                                                    <li>
+                                                                        <a href="/about_support_staff">ฝ่ายธุรการและงานอำนวยการ   </a>
+                                                                    </li>
+                                                                                                                                    </ul>
+                                                                <ul>
+                                                                    <li>
+                                                                        <a href="/about_subcommittee">อนุกรรมการบริหารงานบุคคล   </a>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="submenuList">
+                                                            <ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul>
+                                                                <ul>
+                                                                    <li><a href="/about_vision">วิสัยทัศน์และพันธกิจ  </a></li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li><a href="/about_location">สถานที่ตั้ง  </a></li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li><a href="/about_organize">โครงสร้างองค์กร  </a></li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li><a href="/about_symbol">สัญลักษณ์โรงเรียน  </a></li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li><a href="/about_stratigic">แผนเชิงกลยุทธ์ </a></li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li><a href="/mottos">คติพจน์ </a></li>
+                                                                </ul>
+                                                                <ul>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="EN" hidden="hidden">
+                                            <a href="#"> About KNIS  <i class="fi fi-rr-angle-small-down"></i> </a>
+                                        <div class="dropdown-container">
+                                            <ul class="submenudrop">
+                                                <div class="row">
+                                                        <div class="col-md-2 border-end">
+                                                            <div class="headMenu">
+                                                                <span> About KNIS </span> <br>
+                                                                เกี่ยวกับโรงเรียน
+                                                            </div>
+                                                        </div>
+                                                    <div class="col-md-3">
+                                                        <div class="submenuList">
+                                                                <ul>
+                                                                    <li><a href="/about_discover">Discover KNIS </a></li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li><a href="/about_foundation">Foundation </a></li>                                                              
+                                                                </ul>
+                                                                <ul>
+                                                                    <li><a href="/about_royalschool">Her Royal Highness Princess Maha Chakri Sirindhorn and KNIS </a></li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li><a href="/about_administrators">Administrators </a></li>
+                                                                </ul>
+                                                                <ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul>
+                                                                <ul>
+                                                                    <li><a href="/about_board_of_governors">BOARD OF GOVERNORS </a></li>
+                                                                </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="submenuList">
+                                                        <ul>                                                                                                                                                                                                                                                                            </ul>
+                                                            <ul></ul><ul></ul><ul></ul>
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="/message_chairman">Message from Chairman </a>
+                                                                </li>      
+                                                            </ul>
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="/message_principle">Message from Principal </a>
+                                                                </li>
+                                                            </ul>
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="/about_teacher">Teaching Staff, Senior Advisors and Visiting Teachers  </a>
+                                                                </li>
+                                                            </ul>
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="/about_support_staff">Supporting Staff  </a>
+                                                                </li>
+                                                            </ul>
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="/about_subcommittee">Subcommittee  </a>
+                                                                </li>
+                                                            </ul>
+                                                            <ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="submenuList">
+                                                            <ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul><ul></ul>
+                                                            <ul>
+                                                                <li><a href="/about_vision">Vision &amp; Mission </a></li>
+                                                            </ul>
+                                                            <ul>
+                                                                <li><a href="/about_location">Location </a></li>
+                                                            </ul>
+                                                            <ul>
+                                                                <li><a href="/about_organize">Organization Structure </a></li>
+                                                            </ul>
+                                                            <ul>
+                                                                <li><a href="/about_symbol">Symbols </a></li>
+                                                            </ul>
+                                                            <ul>
+                                                                <li><a href="/about_stratigic">Strategic Plan </a></li>
+                                                            </ul>
+                                                            <ul>
+                                                                <li><a href="/mottos">Mottos </a></li>
+                                                            </ul>
+                                                            <ul></ul>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="TH">
+                                        <a href="#"> หลักสูตร  <i class="fi fi-rr-angle-small-down"></i></a>
+                                        <div class="dropdown-container">
+                                            <ul class="submenudrop">
+                                                <div class="row">
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="headMenu">
+                                                            <span> Academic  </span> <br>
+                                                            หลักสูตร 
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="submenuList">
+                                                                <ul>
+                                                                    <li><a href="/curriculum_structure"> โครงสร้างหลักสูตร </a></li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li><a href="/curriculum_offer">ข้อมูลหลักสูตร </a></li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li><a href="/graduation_criteria">เกณฑ์การจบการศึกษา  </a></li>
+                                                                </ul>
+                                                                <ul>
+                                                                    <li> <a href="/Upload/img_Academic/20_11_2023_11_32_41_13_06_2023_16_53_23_Curriculum_Course catalog.pdf" target="_blank">กลุ่มรายวิชา  </a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="EN" hidden="hidden">
+                                            <a href="#"> Academic  <i class="fi fi-rr-angle-small-down"></i></a>
+                                            <div class="dropdown-container">
+                                                <ul class="submenudrop">
+                                                    <div class="row">
+                                                        <div class="col-md-2 border-end">
+                                                            <div class="headMenu">
+                                                                <span> Academic  </span> <br>
+                                                                หลักสูตร 
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="submenuList">
+                                                                    <ul>
+                                                                        <li><a href="/curriculum_structure"> Curriculum Structure </a></li>
+                                                                    </ul>
+                                                                    <ul>
+                                                                        <li><a href="/curriculum_offer">Overview </a></li>
+                                                                    </ul>
+                                                                    <ul>
+                                                                        <li><a href="/graduation_criteria">Graduation Criteria </a></li>
+                                                                    </ul>
+                                                                    <ul>
+                                                                        <li> <a href="/Upload/img_Academic/13062023165323_Curriculum_Course catalog ENG.pdf" target="_blank">Course Catalog   </a></li>
+                                                                    </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="TH"><a href="/research">วิจัยผลสัมฤทธิ์ทางการเรียน   </a></li>
+                                        <li class="EN" hidden="hidden"><a href="/research">achievement research    </a></li>
+                                        <li class="TH"><a href="/news">ข่าวสาร   </a></li>
+                                        <li class="EN" hidden="hidden"><a href="/news">news    </a></li>
+                                        <li class="TH"><a href="/campuslife">เเคมปัสไลฟ์   </a></li>
+                                        <li class="EN" hidden="hidden"><a href="/campuslife">campus life    </a></li>
+                                        <li class="TH"><a href="/community">คอมมูนิตี้  </a></li>
+                                        <li class="EN" hidden="hidden"><a href="/community">community   </a></li>
+                                        <li class="TH"><a href="/contact_us">ติดต่อเรา   </a></li>
+                                        <li class="EN" hidden="hidden"><a href="/contact_us">contact us    </a></li>
+
+                                    <li class="TH">
+                                        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightTH" aria-controls="offcanvasRightTH">
+                                            <i class="fi fi-rr-menu-burger"></i>
+                                        </a>
+
+                                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRightTH" aria-labelledby="offcanvasWithBackdropLabel">
+                                            <div class="offcanvas-header">
+
+                                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                            </div>
+                                            <div class="offcanvas-body text-start">
+                                                <h6><b>KNIS</b></h6>
+                                                <ul>
+                                                    <li class="TH"><a href="/alumni">alumni</a></li>
+                                                    <li><a href="/calendar">ปฎิทินกิจกรรม</a></li>
+                                                    <li><a href="/academiccalendar"> ปฎิทินการศึกษา  </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="EN" hidden="hidden">
+                                        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                            <i class="fi fi-rr-menu-burger"></i>
+                                        </a>
+
+                                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasWithBackdropLabel">
+                                            <div class="offcanvas-header">
+
+                                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                            </div>
+                                            <div class="offcanvas-body text-start">
+                                                <h6><b>KNIS</b></h6>
+                                                <ul>
+                                                    <li><a href="/alumni">alumni   </a></li>
+                                                    <li><a href="/calendar">Event Calendar  </a></li>
+                                                    <li><a href="/academiccalendar">Academic Calendar  </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none">
+            <div class="container-fluid">
+                <div class="menumb_group">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="mainlogo">
+                                <a href="/"><img src="https://kkw-edx.pages.dev/mainlogo.png" alt="" class="img-fluid sizeLogo"></a>
+                            </div>
+                            <div class="mainlogoB">
+                                <a href="/"><img src="https://kkw-edx.pages.dev/mainlogoci.png" alt="" class="img-fluid sizeLogo"></a>
+                            </div>
+                        </div>
+                        <div class="col-9 g-0 text-end">
+                            <div class="langsearch">
+                                <li class="searchmb">
+                                    <button class="searchbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                                        <div class="offcanvas-header">
+                                            <h5 id="offcanvasTopLabel">Search</h5>
+                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body">
+                                            <div class="searchbar_form">
+                                                <div class="input-group mb-3">
+                                                    <input type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="button-addon2">
+                                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                                                        <i class="bi bi-search"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    
+                                </li>
+                                <li>
+                                    <a href="#" id="burger"><span></span> <span></span> <span></span> </a>
+                                </li>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <nav id="nav-main">
+
+                    <ul>
+                        
+
+                        <li class="dropdown TH">
+                                <a href="#">เกี่ยวกับโรงเรียน </a>
+
+                            <ul style="display:none;">
+                                        <li><a href="/about_discover"> ข้อมูลโรงเรียน  </a></li>
+                                        <li><a href="/about_foundation">ข้อมูลมูลนิธิ  </a></li>
+                                        <li><a href="/about_royalschool">ชื่อพระราชทาน </a></li>
+                                        <li><a href="/about_administrators">ผู้บริหาร   </a></li>
+                                        <li>
+                                            <a href="/message_chairman">สาสน์จากประธานกรรมการบริหารโรงเรียน  </a>
+                                        </li>
+                                        <li>
+                                            <a href="/message_principle">สาสน์จากผู้อำนวยการโรงเรียน  </a>
+                                        </li>
+                                        <li>
+                                            <a href="/about_teacher">คณาจารย์และผู้ทรงคุณวุฒิ  </a>
+                                        </li>
+                                        <li>
+                                            <a href="/about_support_staff">ฝ่ายธุรการและงานอำนวยการ  </a>
+                                        </li>
+                                        <li>
+                                            <a href="/about_subcommittee">อนุกรรมการบริหารงานบุคคล   </a>
+                                        </li>
+                                        <li><a href="/about_vision">วิสัยทัศน์และพันธกิจ   </a></li>
+                                        <li><a href="/about_location">สถานที่ตั้ง   </a></li>
+                                        <li><a href="/about_organize">โครงสร้างองค์กร  </a></li>
+                                        <li><a href="/about_symbol">สัญลักษณ์โรงเรียน  </a></li>
+                                        <li><a href="/about_stratigic">แผนเชิงกลยุทธ์ </a></li>
+                                        <li><a href="/mottos">Mottos </a></li>
+                                        <li><a href="/about_board_of_governors">BOARD OF GOVERNORS </a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="dropdown EN" hidden="hidden">
+                                <a href="#">About KVIS </a>
+
+                            <ul style="display:none;">
+                                        <li><a href="/about_discover">Discover KVIS </a></li>
+                                        <li><a href="/about_foundation">Foundation </a></li>
+                                        <li><a href="/about_royalschool">Her Royal Highness Princess Maha Chakri Sirindhorn and KVIS </a></li>
+                                        <li><a href="/about_administrators">Administrators  </a></li>
+                                        <li>
+                                            <a href="/message_chairman">Message from Chairman </a>
+                                        </li>
+                                        <li>
+                                            <a href="/message_principle">Message from Principal </a>
+                                        </li>
+                                        <li>
+                                            <a href="/about_teacher">Teaching Staff, Senior Advisors and Visiting Teachers </a>
+                                        </li>
+                                        <li>
+                                            <a href="/about_support_staff">Supporting Staff </a>
+                                        </li>
+                                        <li>
+                                            <a href="/about_subcommittee">Subcommittee  </a>
+                                        </li>
+                                        <li><a href="/about_vision">Vision &amp; Mission  </a></li>
+                                        <li><a href="/about_location">Location  </a></li>
+                                        <li><a href="/about_organize">Organization Structure </a></li>
+                                        <li><a href="/about_symbol">Symbols </a></li>
+                                        <li><a href="/about_stratigic">Strategic Plan </a></li>
+                                        <li><a href="/mottos">Mottos </a></li>
+                                        <li><a href="/about_board_of_governors">BOARD OF GOVERNORS </a></li>
+
+                            </ul>
+
+                        </li>
+
+
+                        
+                            <li class="dropdown TH">
+                                <a href="#"> Academic</a>
+                                    <ul style="display:none;">
+                                            <li>
+                                                <a href="/curriculum_structure">โครงสร้างหลักสูตร </a>
+                                            </li>
+                                                                                                                                                            </ul>
+                                    <ul style="display:none;">
+                                                                                    <li>
+                                                <a href="/curriculum_offer">ข้อมูลหลักสูตร  </a>
+                                            </li>
+                                                                                                                    </ul>
+                                    <ul style="display:none;">
+                                                                                                                            <li>
+                                                <a href="/graduation_criteria">เกณฑ์การจบการศึกษา  </a>
+                                            </li>
+                                                                            </ul>
+                                    <ul style="display:none;">
+                                                                                                                                                                        <li> <a href="/Upload/img_Academic/20_11_2023_11_32_41_13_06_2023_16_53_23_Curriculum_Course catalog.pdf" target="_blank">กลุ่มรายวิชา  </a></li>
+                                    </ul>
+                            </li>
+                            <li class="dropdown EN" hidden="hidden">
+                                <a href="#"> Academic</a>
+                                    <ul style="display:none;">
+                                            <li>
+                                                <a href="/curriculum_structure">Curriculum Structure </a>
+                                            </li>
+                                                                                                                                                            </ul>
+                                    <ul style="display:none;">
+                                                                                    <li>
+                                                <a href="/curriculum_offer">Overview  </a>
+                                            </li>
+                                                                                                                    </ul>
+                                    <ul style="display:none;">
+                                                                                                                            <li>
+                                                <a href="/graduation_criteria">Graduation Criteria </a>
+                                            </li>
+                                                                            </ul>
+                                    <ul style="display:none;">
+                                                                                                                                                                        <li> <a href="/Upload/img_Academic/13062023165323_Curriculum_Course catalog ENG.pdf" target="_blank">Course Catalog    </a></li>
+                                    </ul>
+                            </li>
+
+
+                        
+                            <li class="TH"><a href="/research">วิจัยผลสัมฤทธิ์ทางการเรียน   </a></li>
+                            <li class="EN" hidden="hidden"><a href="/research">achievement research    </a></li>
+
+                        
+                            <li class="TH"><a href="/news">ข่าวสาร   </a></li>
+                            <li class="EN" hidden="hidden"><a href="/news">news    </a></li>
+
+                        
+                            <li class="TH"><a href="/campuslife">เเคมปัสไลฟ์   </a></li>
+                            <li class="EN" hidden="hidden"><a href="/campuslife">campus life    </a></li>
+
+                        
+                            <li class="TH"><a href="/community">คอมมูนิตี้  </a></li>
+                            <li class="EN" hidden="hidden"><a href="/community">community   </a></li>
+
+                        
+                            <li class="TH"><a href="/contact_us">ติดต่อเรา   </a></li>
+                            <li class="EN" hidden="hidden"><a href="/contact_us">contact us    </a></li>
+
+                        
+                            <li class="TH"><a href="/alumni">alumni </a></li>
+                            <li class="EN" hidden="hidden"><a href="/alumni">alumni  </a></li>
+
+                        
+                            <li class="TH"><a href="/calendar">ปฎิทินกิจกรรม  </a></li>
+                            <li class="EN" hidden="hidden"><a href="/calendar">Event Calendar  </a></li>
+                                                    <li class="TH"><a href="/academiccalendar"> ปฎิทินการศึกษา  </a></li>
+                            <li class="EN" hidden="hidden"><a href="/academiccalendar">Academic Calendar  </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <style>
+        .single a .img1 {
+            background-image: url('../../Upload/img_Recruitment/27_12_2023_14_12_16_3c9a10e4d8-pic 1.jpg ') !important;
+        }
+    
+        .single a .img2 {
+            background-image: url('../../Upload/img_Announce/10_04_2023_16_52_37_annouce_banner.png') !important;
+        }
+    
+        .single a .img3 {
+            background-image: url('../../Upload/img_procurement/23_05_2023_08_53_30_11447386_1297.jpg') !important;
+        }
+         
+    </style>
+    <section id="indexhomepage">
+        <div class="bannerhome">
+            <div class="bannerslide owl-carousel  owl-theme owl-loaded owl-drag">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage" style="transform: translate3d(-3015px, 0px, 0px); transition: 2s; width: 6030px;">
+                        <div class="owl-item">
+                            <div class="item">
+                        <!-- PC -->
+    
+                        <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block">
+                            <img src="https://kkw-edx.pages.dev/2.png" alt="" class="img-fluid">
+                        </div>
+    
+                        <!-- MB -->
+    
+                        <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none">
+                            <img src="https://kkw-edx.pages.dev/2.png" alt="" class="img-fluid">
+                        </div>
+    
+                        <div class="captionBanner text-center">
+                            <h1 data-aos="fade-up" class="TH aos-init aos-animate" data-aos-once="false" data-aos-duration="1500">
+                                Academy
+                            </h1>
+                            <h2 data-aos="fade-up" class="TH aos-init aos-animate" data-aos-once="false" data-aos-duration="2000">
+                                To raise national scientific and technology competitiveness through the creation of opportunities
+                            </h2>
+                            <h1 data-aos="fade-up" class="EN aos-init aos-animate" hidden="hidden" data-aos-once="false" data-aos-duration="1500">
+                                Academy
+                            </h1>
+                            <h2 data-aos="fade-up" class="EN aos-init aos-animate" hidden="hidden" data-aos-once="false" data-aos-duration="2000">
+                                To raise national scientific and technology competitiveness through the creation of opportunities
+                            </h2>
+                        </div>
+                    </div></div><div class="owl-item"><div class="item">
+                        <!-- PC -->
+    
+                        <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block">
+                            <img src="https://kkw-edx.pages.dev/1.png" alt="" class="img-fluid">
+                        </div>
+    
+                        <!-- MB -->
+    
+                        <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none">
+                            <img src="https://kkw-edx.pages.dev/1.png" alt="" class="img-fluid">
+                        </div>
+    
+                        <div class="captionBanner text-center">
+                            <h1 data-aos="fade-up" class="TH aos-init aos-animate" data-aos-once="false" data-aos-duration="1500">
+                                Mathematics Academy 
+                            </h1>
+                            <h2 data-aos="fade-up" class="TH aos-init aos-animate" data-aos-once="false" data-aos-duration="2000">
+                                To raise national scientific and technology competitiveness through the creation of opportunities
+                            </h2>
+                            <h1 data-aos="fade-up" class="EN aos-init aos-animate" hidden="hidden" data-aos-once="false" data-aos-duration="1500">
+                                Mathematics Academy 
+                            </h1>
+                            <h2 data-aos="fade-up" class="EN aos-init aos-animate" hidden="hidden" data-aos-once="false" data-aos-duration="2000">
+                                To raise national scientific and technology competitiveness through the creation of opportunities
+                            </h2>
+                        </div>
+                    </div></div><div class="owl-item"><div class="item">
+                        <!-- PC -->
+    
+                        <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block">
+                            <img src="https://kkw-edx.pages.dev/2.png" alt="" class="img-fluid">
+                        </div>
+    
+                        <!-- MB -->
+    
+                        <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none">
+                            <img src="https://kkw-edx.pages.dev/2.png" alt="" class="img-fluid">
+                        </div>
+    
+                        <div class="captionBanner text-center">
+                            <h1 data-aos="fade-up" class="TH aos-init aos-animate" data-aos-once="false" data-aos-duration="1500">
+                                Academy
+                            </h1>
+                            <h2 data-aos="fade-up" class="TH aos-init aos-animate" data-aos-once="false" data-aos-duration="2000">
+                                To raise national scientific and technology competitiveness through the creation of opportunities
+                            </h2>
+                            <h1 data-aos="fade-up" class="EN aos-init aos-animate" hidden="hidden" data-aos-once="false" data-aos-duration="1500">
+                                Academy
+                            </h1>
+                            <h2 data-aos="fade-up" class="EN aos-init aos-animate" hidden="hidden" data-aos-once="false" data-aos-duration="2000">
+                                To raise national scientific and technology competitiveness through the creation of opportunities
+                            </h2>
+                        </div>
+                    </div></div><div class="owl-item"><div class="item">
+                        <!-- PC -->
+    
+                        <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block">
+                            <img src="https://kkw-edx.pages.dev/1.png" alt="" class="img-fluid">
+                        </div>
+    
+                        <!-- MB -->
+    
+                        <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none">
+                            <img src="https://kkw-edx.pages.dev/1.png" alt="" class="img-fluid">
+                        </div>
+    
+                        <div class="captionBanner text-center">
+                            <h1 data-aos="fade-up" class="TH aos-init aos-animate" data-aos-once="false" data-aos-duration="1500">
+                                Mathematics Academy 
+                            </h1>
+                            <h2 data-aos="fade-up" class="TH aos-init aos-animate" data-aos-once="false" data-aos-duration="2000">
+                                To raise national scientific and technology competitiveness through the creation of opportunities
+                            </h2>
+                            <h1 data-aos="fade-up" class="EN aos-init aos-animate" hidden="hidden" data-aos-once="false" data-aos-duration="1500">
+                                Mathematics Academy 
+                            </h1>
+                            <h2 data-aos="fade-up" class="EN aos-init aos-animate" hidden="hidden" data-aos-once="false" data-aos-duration="2000">
+                                To raise national scientific and technology competitiveness through the creation of opportunities
+                            </h2>
+                        </div>
+                    </div></div><div class="owl-item"><div class="item">
+                        <!-- PC -->
+    
+                        <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block">
+                            <img src="https://kkw-edx.pages.dev/2.png" alt="" class="img-fluid">
+                        </div>
+    
+                        <!-- MB -->
+    
+                        <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none">
+                            <img src="https://kkw-edx.pages.dev/2.png" alt="" class="img-fluid">
+                        </div>
+    
+                        <div class="captionBanner text-center">
+                            <h1 data-aos="fade-up" class="TH aos-init aos-animate" data-aos-once="false" data-aos-duration="1500">
+                                Academy
+                            </h1>
+                            <h2 data-aos="fade-up" class="TH aos-init aos-animate" data-aos-once="false" data-aos-duration="2000">
+                                To raise national scientific and technology competitiveness through the creation of opportunities
+                            </h2>
+                            <h1 data-aos="fade-up" class="EN aos-init aos-animate" hidden="hidden" data-aos-once="false" data-aos-duration="1500">
+                                Academy
+                            </h1>
+                            <h2 data-aos="fade-up" class="EN aos-init aos-animate" hidden="hidden" data-aos-once="false" data-aos-duration="2000">
+                                To raise national scientific and technology competitiveness through the creation of opportunities
+                            </h2>
+                        </div>
+                    </div></div><div class="owl-item"><div class="item">
+                        <!-- PC -->
+    
+                        <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block">
+                            <img src="https://kkw-edx.pages.dev/1.png" alt="" class="img-fluid">
+                        </div>
+    
+                        <!-- MB -->
+    
+                        <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none">
+                            <img src="https://kkw-edx.pages.dev/1.png" alt="" class="img-fluid">
+                        </div>
+    
+                        <div class="captionBanner text-center">
+                            <h1 data-aos="fade-up" class="TH aos-init aos-animate" data-aos-once="false" data-aos-duration="1500">
+                                Mathematics Academy 
+                            </h1>
+                            <h2 data-aos="fade-up" class="TH aos-init aos-animate" data-aos-once="false" data-aos-duration="2000">
+                                To raise national scientific and technology competitiveness through the creation of opportunities
+                            </h2>
+                            <h1 data-aos="fade-up" class="EN aos-init aos-animate" hidden="hidden" data-aos-once="false" data-aos-duration="1500">
+                                 Mathematics Academy 
+                            </h1>
+                            <h2 data-aos="fade-up" class="EN aos-init aos-animate" hidden="hidden" data-aos-once="false" data-aos-duration="2000">
+                                To raise national scientific and technology competitiveness through the creation of opportunities
+                            </h2>
+                        </div>
+                    </div></div>
+                    </div>
+                </div>
+                <div class="owl-nav disabled">
+                    <button type="button" role="presentation" class="owl-prev">
+                        <span aria-label="Previous">‹</span>
+                    </button>
+                    <button type="button" role="presentation" class="owl-next">
+                        <span aria-label="Next">›</span>
+                    </button>
+                </div>
+                <div class="owl-dots">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://www.kvis.ac.th/Kvis_Frontend/js/bootstrap.bundle.js"></script>
+    <script src="https://www.kvis.ac.th/Kvis_Frontend/js/jquery-ui.js"></script>
+    <script src="https://www.kvis.ac.th/Kvis_Frontend/js/jquery.fancybox.min.js"></script>
+    <script src="https://www.kvis.ac.th/Kvis_Frontend/js/jquery.min.js"></script>
+    <script src="https://www.kvis.ac.th/Kvis_Frontend/js/modernizr.js"></script>
+    <script src="https://www.kvis.ac.th/Kvis_Frontend/js/owl.carousel.min.js"></script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+
+    <!-- ✅ load moment.js ✅ -->
+    <script src="https://www.kvis.ac.th/Assest/js/moment.min.js"></script>
+    <script src="https://www.kvis.ac.th/Assest/js/moment-with-locales.min.js"></script>
+
+    <!-- ✅ load FullCalendar ✅ -->
+    <script src="https://www.kvis.ac.th/Assest/js/fullcalendar.min.js"></script>
+
+    <script src="https://www.kvis.ac.th/Assest/js/pagination.min.js"></script>
+
+
+    <script src="https://www.kvis.ac.th/Assest/js/sweetalert2@11.js"></script>
+
+    <script>
+    $(document).ready(function () {
+        $('.fontsize_s').click(function (event) {
+            $('html').removeClass('fz_l');
+            $('html').addClass('fz_s');
+        });
+        $('.fontsize_m').click(function (event) {
+            $('html').removeClass('fz_l fz_s');
+        });
+        $('.fontsize_l').click(function (event) {
+            $('html').removeClass('fz_s');
+            $('html').addClass('fz_l');
+        });
+    });
+</script>
+
+<script>
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 25) {
+            $('.wrap_menu').addClass("sticky");
+        } else {
+            $('.wrap_menu').removeClass("sticky");
+        }
+
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        var mmH = $('.wrap_menu').outerHeight(true); {
+            $('.wrapperPages').eq(0).css('padding-top', mmH);
+        }
+
+    });
+</script>
+
+
+<script>
+    $(window).scroll(function () {
+
+        let oppai = $(this).scrollTop();
+
+        $('#content article').css({
+            opacity: 100 / oppai,
+            filter: 'blur(' + oppai / 100 + 'px)'
+        });
+        $('#content').css({
+            opacity: 100 / oppai
+        });
+
+        if (oppai > 190) {
+            if (!$('body').hasClass('abrido'))
+                $('#header-main').addClass('arre');
+        } else {
+            $('#header-main').removeClass('arre');
+        }
+    });
+
+    $('#burger').on('click', function (e) {
+
+        e.preventDefault();
+
+        $('#nav-main, body, #burger').toggleClass('abrido');
+
+        if ($('#header-main').hasClass('arre')) {
+            $('#header-main').removeClass('arre').addClass('arreno');
+        } else if ($('#header-main').hasClass('arreno')) {
+            $('#header-main').removeClass('arreno');
+            setTimeout(() => {
+                $('#header-main').addClass('arre')
+            }, 500);
+        }
+    });
+
+    $('#nav-main > ul > .dropdown > a').click(function (event) {
+        if ($(this).siblings("ul").is(":hidden")) {
+            if (Modernizr.mq('(max-width: 767px)')) {
+                $("#nav-main ul ul").slideUp();
+                $(this).siblings("ul").slideDown();
+            }
+        } else {
+            if (Modernizr.mq('(max-width: 767px)')) {
+                $("#nav-main ul ul").slideUp();
+            }
+        }
+        event.preventDefault();
+    });
+
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".select-display-slide > li").click(function () {
+            var rel = $(this).attr("rel");
+            console.log(rel);
+            $('.display-slide').hide();
+            $('.display-slide[rel=' + rel + ']').fadeIn();
+            $(".select-display-slide > li > a").removeClass("active");
+            $(this).find('a').addClass("active");
+        });
+    });
+
+</script>
+
+<script>
+
+    $(document).ready(function () {
+
+        language_switch();
+
+    });
+
+    $(() => {
+        $(document).on('keypress','#search-box',function (event) {
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+                var search = $("#search-box").val();
+                 window.location.href = '/searchresult?search=' + search;
+
+            }
+        });
+    });
+
+
+    function switchlg(lg) {
+        if (lg == 1) {
+            var TH = "TH";
+            sessionStorage.setItem("lg", TH);
+        } else {
+            var TH = "EN";
+            sessionStorage.setItem("lg", TH);
+        }
+        language_switch();
+    }
+
+    function language_switch() {
+        var local = sessionStorage.getItem("lg");
+        if (local == null) {
+            sessionStorage.setItem("lg", "TH");
+        }
+        if (local == "TH") {
+            $('.SW_TH').addClass("active");
+            $('.SW_EN').removeClass("active");
+            $('.TH').removeAttr('hidden', 'hidden');
+            $('.EN').attr('hidden', 'hidden');
+            $('.TH_img').attr('data-fancybox', 'images');
+            $('.EN_img').removeAttr('data-fancybox');
+        } else if (local == "EN") {
+            $('.SW_EN').addClass("active");
+            $('.SW_TH').removeClass("active");
+            $('.EN').removeAttr('hidden', 'hidden');
+            $('.TH').attr('hidden', 'hidden');
+            $('.TH_img').removeAttr('data-fancybox');
+            $('.EN_img').attr('data-fancybox', 'images');
+        } else {
+            $('.SW_TH').addClass("active");
+            $('.SW_EN').removeClass("active");
+            $('.TH').removeAttr('hidden', 'hidden');
+            $('.EN').attr('hidden', 'hidden');
+            $('.TH_img').attr('data-fancybox', 'images');
+            $('.EN_img').removeAttr('data-fancybox');
+        }
+    }
+</script>
+ 
+
+    <script>
+        $('.bannerslide').owlCarousel({
+            loop: true,
+            item: 1,
+            slideBy: 1,
+            autoplay: true,
+            autoplayHoverPause: true,
+            smartSpeed: 2000,
+            dots: true,
+            responsive: {
+                0: {
+                    items: 1,
+
+
+
+                },
+                600: {
+                    items: 1,
+                    slideBy: 1,
+                    nav: false,
+
+                },
+                1024: {
+                    items: 1,
+                    slideBy: 1,
+
+                },
+                1200: {
+                    items: 1,
+                    slideBy: 1,
+
+                }
+            }
+        })
+        $('.news_slider').owlCarousel({
+            margin: 0,
+            loop: false,
+            item: 3,
+            autoplay: false,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            smartSpeed: 500,
+            nav: true,
+            navText: ['<img src="/Kvis_Frontend/images/arrow_left.svg">', '<img src="/Kvis_Frontend/images/arrow_right.svg">'],
+            navClass: ['owl-prev', 'owl-next'],
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    slideBy: 1,
+                    margin: 10,
+
+                },
+                600: {
+                    items: 1,
+                    slideBy: 1,
+                    nav: false,
+
+
+                },
+                1024: {
+                    items: 2,
+                    slideBy: 1,
+
+                },
+                1200: {
+                    items: 2,
+                    slideBy: 1,
+
+                }
+            }
+        })
+    </script>
+    <script>
+        $('.counter-count').each(function () {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+
+                //chnage count up speed here
+                duration: 4000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var h = $(".bannervid").parents('.owl-stage').find('.owl-item').eq(0).height();
+            $(".bannervid").css("height", h);
+        });
+            // $(window).resize(function(){
+            //     var h = $(".bannervid").parents('.owl-stage').find('.owl-item').eq(0).height();
+            //     $(".bannervid").css("height",h);
+            // })
+    </script>
+</body>
+</html>
