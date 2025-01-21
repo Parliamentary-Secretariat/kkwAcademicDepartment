@@ -71,7 +71,7 @@
         </div>
       </div>
       <p>
-      	<a href="https://admission.reg.kmitl.ac.th/#/undergraduate/announcement_tcas">เข้าดูผลสัมภาษณ์</a>
+      	<a id="interview-link" href="https://admission.reg.kmitl.ac.th/#/undergraduate/announcement_tcas" style="pointer-events: none; color: gray;" >เข้าดูผลสัมภาษณ์</a>
       </p>
     </div>
 
@@ -103,5 +103,31 @@
     const interval = setInterval(updateCountdown, 1000);
     updateCountdown();
   </script>
+	<script>
+        // วันที่และเวลาที่ต้องการให้ลิงก์กดได้
+        const targetDate = new Date('2025-01-24T12:40:00');
+​
+        // ตรวจสอบวันที่และเวลา
+        function checkDate() {
+            const currentDate = new Date();
+            const link = document.getElementById('interview-link');
+​
+            if (currentDate >= targetDate) {
+                // เปิดใช้งานลิงก์
+                link.style.pointerEvents = 'auto';
+                link.style.color = ''; // คืนค่าการตั้งค่าสี
+            } else {
+                // ปิดการใช้งานลิงก์
+                link.style.pointerEvents = 'none';
+                link.style.color = 'gray';
+            }
+        }
+​
+        // เรียกใช้ฟังก์ชันทันทีเมื่อโหลดหน้า
+        checkDate();
+​
+        // ตั้งให้ฟังก์ชันตรวจสอบซ้ำทุกวินาที
+        setInterval(checkDate, 1000);
+    </script>
 </body>
 </html>
