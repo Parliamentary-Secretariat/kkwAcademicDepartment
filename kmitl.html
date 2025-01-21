@@ -39,7 +39,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 98, 0, 0.75)), url(https://scontent.fbkk12-4.fna.fbcdn.net/v/t1.6435-9/75625360_2708828382511763_3205029120262012928_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=rajjgOm7cBIQ7kNvgF_j0cz&_nc_oc=AdhWdYQz8Ja0cMORrjhEXCdZ7XCKms_GS99hoVLNTstR1nB2KWe85nYoU5gw-g481-E&_nc_zt=23&_nc_ht=scontent.fbkk12-4.fna&_nc_gid=AdDd_Zs3jR7k3ZFLw8NsBAK&oh=00_AYA7Rwyhnv5ztK22z7GfAXr7XpC4MTKjsv581QEsHroZhQ&oe=67B6C2D8);;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 98, 0, 0.75)), url('ilovekmitl.jpg');
+        transition: background-image 0.5s ease;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -156,6 +157,25 @@
 ​
         // ตั้งให้ฟังก์ชันตรวจสอบซ้ำทุกวินาที
         setInterval(checkDate, 1000);
+
+	// เปลี่ยนพื้นหลังทุก 1 ชั่วโมง
+	    function updateBackground() {
+	      const now = new Date();
+	      const hour = now.getHours();
+	
+	      // ตรวจสอบชั่วโมงและเปลี่ยน URL
+	      if (hour % 2 === 0) {
+	        document.body.style.backgroundImage = 
+	          "linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 98, 0, 0.75)), url('ilovekmitl.jpg')";
+	      } else {
+	        document.body.style.backgroundImage = 
+	          "linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 98, 0, 0.75)), url('phra_chom_klao.jpg')";
+	      }
+	    }
+	
+	    // อัปเดตพื้นหลังทันทีเมื่อโหลด และตั้งเวลาให้เปลี่ยนทุกชั่วโมง
+	    updateBackground();
+	    setInterval(updateBackground, 1000 * 60 * 60); // ทุก 1 ชั่วโมง
     </script>
 </body>
 </html>
