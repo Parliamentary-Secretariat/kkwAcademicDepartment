@@ -157,24 +157,26 @@
         // ตั้งให้ฟังก์ชันตรวจสอบซ้ำทุกวินาที
         setInterval(checkDate, 1000);
 
-	// เปลี่ยนพื้นหลังทุก 1 ชั่วโมง
-	    function updateBackground() {
-	      const now = new Date();
-	      const hour = now.getHours();
-	
-	      // ตรวจสอบชั่วโมงและเปลี่ยน URL
-	      if (hour % 2 === 0) {
-	        document.body.style.backgroundImage = 
-	          "linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 98, 0, 0.75)), url('ilovekmitl.jpg')";
-	      } else {
-	        document.body.style.backgroundImage = 
-	          "linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 98, 0, 0.75)), url('phra_chom_klao.jpg')";
-	      }
-	    }
-	
-	    // อัปเดตพื้นหลังทันทีเมื่อโหลด และตั้งเวลาให้เปลี่ยนทุกชั่วโมง
-	    updateBackground();
-	    setInterval(updateBackground, 1000 * 60 * 60); // ทุก 1 ชั่วโมง
+	/// ฟังก์ชันสำหรับเปลี่ยนพื้นหลัง
+function updateBackground() {
+  const now = new Date();
+  const hour = now.getHours(); // ดึงชั่วโมงปัจจุบัน
+
+  // ตรวจสอบชั่วโมงคู่และคี่
+  if (hour % 2 === 0) {
+    document.body.style.backgroundImage = 
+      "linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 98, 0, 0.75)), url('ilovekmitl.jpg')";
+  } else {
+    document.body.style.backgroundImage = 
+      "linear-gradient(rgba(0, 0, 0, 0.25), rgba(98, 0, 255, 0.75)), url('phra_chom_klao.jpg')";
+  }
+}
+
+// เรียกใช้งานฟังก์ชันทันทีเมื่อโหลด
+updateBackground();
+
+// ตั้งเวลาให้เปลี่ยนพื้นหลังทุก 1 ชั่วโมง
+setInterval(updateBackground, 1000 * 60 * 60);
     </script>
 </body>
 </html>
