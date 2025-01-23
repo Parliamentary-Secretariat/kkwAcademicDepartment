@@ -12,14 +12,11 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #f0f8ff;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 98, 0, 0.75)), url('ilovekmitl.jpg');
+      background-size: cover;
+      background-position: center;
       font-family: 'Bai Jamjuree', sans-serif;
       overflow: hidden;
-    transition: background-image 0.5s ease;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 98, 0, 0.75)), url(ilovekmitl.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     }
 
     .bubble {
@@ -29,7 +26,7 @@
       transform: translateX(-50%);
       font-size: 2rem;
       font-weight: 700;
-      color: #ff4500;
+      color: #fff;
       animation: floatUp 5s infinite ease-in-out;
     }
 
@@ -51,7 +48,7 @@
     .bubble:nth-child(2) {
       animation-delay: 1s;
       font-size: 2.5rem;
-      color: #0077ff;
+      color: #ffdd33;
     }
 
     .bubble:nth-child(3) {
