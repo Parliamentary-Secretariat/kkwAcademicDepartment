@@ -1,37 +1,76 @@
 <!DOCTYPE html>
-<html lang="th"><head>
+<html lang="th">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
- <!-- Icon -->
-    <link rel="icon" href="https://kkw-edx.pages.dev/IMG_7864.jpeg" type="image/jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://kkw-edx.pages.dev/IMG_7864.jpeg" type="image/jpeg">
+  <title>I love KMITL</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+      font-family: 'Bai Jamjuree', sans-serif;
+      overflow: hidden;
+    transition: background-image 0.5s ease;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 98, 0, 0.75)), url(ilovekmitl.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
 
-    <!-- Meta tags for social media -->
-    <!-- ชื่อเว็บไซต์ -->
-    <meta property="og:title" content="KMITL - Naphat loves KMITL">
-    <!-- คำอธิบาย -->
-    <meta property="og:description" content="ฉันต้องติด สจล. วิศวลาดกระบัง I LOVE KMITL">
-    <!-- URL ของเว็บไซต์ -->
-    <meta property="og:url" content="https://kkw-edx.pages.dev/kmitl">
-    <!-- รูปภาพตัวอย่าง -->
-    <meta property="og:image" content="https://kkw-edx.pages.dev/IMG_7864.jpeg">
-    <!-- ประเภทเนื้อหา -->
-    <meta property="og:type" content="website">
-    <!-- Twitter meta tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="KMITL - Naphat loves KMITL">
-    <meta name="twitter:description" content="ฉันต้องติด สจล. วิศวลาดกระบัง I LOVE KMITL">
-    <meta name="twitter:image" content="https://kkw-edx.pages.dev/IMG_7864.jpeg">
+    .bubble {
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ff4500;
+      animation: floatUp 5s infinite ease-in-out;
+    }
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="ฉันต้องติด สจล. วิศวลาดกระบัง I LOVE KMITL">
-    <meta name="keywords" content="Naphat loves KMITL, kmitl, KMITL">
-    <meta name="author" content="Naphat P.">
-	<title>I love KMITL</title>
+    @keyframes floatUp {
+      0% {
+        transform: translate(-50%, 0) scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: translate(-50%, -50vh) scale(1.2);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translate(-50%, -100vh) scale(0.8);
+        opacity: 0;
+      }
+    }
+
+    .bubble:nth-child(2) {
+      animation-delay: 1s;
+      font-size: 2.5rem;
+      color: #0077ff;
+    }
+
+    .bubble:nth-child(3) {
+      animation-delay: 2s;
+      font-size: 2.2rem;
+      color: #32cd32;
+    }
+
+    .bubble:nth-child(4) {
+      animation-delay: 3s;
+      font-size: 2.8rem;
+      color: #ff69b4;
+    }
+  </style>
 </head>
 <body>
-
+  <div class="bubble">I love KMITL</div>
+  <div class="bubble">I love KMITL</div>
+  <div class="bubble">I love KMITL</div>
+  <div class="bubble">I love KMITL</div>
 </body>
 </html>
